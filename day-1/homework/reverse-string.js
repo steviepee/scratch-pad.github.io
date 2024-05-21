@@ -18,7 +18,7 @@
  *  c. how do you access individual characters of a String?
  *  d. how do you concatenate Strings? What operator do we use?
  * I = function takes a string
- * O =outputs that string backwards
+ * O = outputs that string backwards
  */
 
 function reverseString(input) {
