@@ -31,12 +31,36 @@
  * 
  *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
  *      the exact case.
+ * I =The function takes in some number, signifying the time
+ * O = Function prints a string of good morning, good night, etc. to the console
+ * C = Must use "if, else if" statements
+ * E = the number is above 24 or below zero
  */
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
-    
+    //create if statements based on the hour given
+    // if the edge case
+if (hour > 24) {
+    //print error to the console
+console.log("ERROR");
+   //if hour is between 0 and 11
+} else if (hour >= 0 && hour <= 11) {
+   //print the phrase Good Morning!
+console.log("Good Morning!");
+   //if hour is between 12 and 16
+} else if (hour >= 12 && hour <= 16) {
+   //print the phrase Good Afternoon!
+console.log("Good Afternoon!");
+   //if hour is between 17 and 21
+} else if (hour >= 17 && hour <= 21) {
+   //print the phrase Good Evening!
+console.log("Good Evening!"); 
+   //and if it's between 21 and 24
+} else {
+    //print Good Night
+    console.log("Good Night!");
+}
     
     
     // YOUR CODE ABOVE HERE //
