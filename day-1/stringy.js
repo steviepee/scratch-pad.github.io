@@ -11,17 +11,18 @@
  *
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
- * I =
- * O =
- * C = 
- * E = 
+ * I =inputs a string
+ * O = returns the strings length
+ * C = N/a
+ * E = N/a
  */
 
 
 
 function length(string) {
     // YOUR CODE BELOW HERE //
-
+//return the length of the string
+return string.length;
 
     // YOUR CODE ABOVE HERE //
 }
