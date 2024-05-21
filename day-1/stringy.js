@@ -11,6 +11,10 @@
  *
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
+ * I =
+ * O =
+ * C = 
+ * E = 
  */
 
 

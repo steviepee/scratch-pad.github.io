@@ -14,13 +14,18 @@
 
 /** 
  * Given an input value, print the value to the screen using console.log().
+ * I = Takes any input 
+ * O = prints input into console
+ * C =N/a
+ * E =N/a
  */
 
 
 
 function print(value) {
   // YOUR CODE BELOW HERE //
-  
+  //return printed input into the console
+  return console.log(value);
 
   
   // YOUR CODE ABOVE HERE //
