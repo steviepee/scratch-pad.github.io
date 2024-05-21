@@ -33,7 +33,7 @@ console.log("Fizz");
             console.log("Buzz");
             //every other number simply prints to the console
         } else {
-            console.log(num)
+            console.log(num);
         }
     }
 }
