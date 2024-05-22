@@ -240,14 +240,38 @@ if (stringOne.length === stringTwo.length) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
- * I = 
- * O = 
- * C = 
- * E = 
+ * I = Function takes two strings
+ * O = returns a number based on which string goes first in abc order
+ * C = na
+ * E = na
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+// set variables for the lowercases of both arguments
+var lilOne = stringOne.toLowerCase();
+var lilTwo = stringTwo.toLowerCase();
+//if the strings are equal
+ if (lilOne === lilTwo) {
+     //return 0
+     return 0;
+ }
+// if they are not, proceed to create a storage array
+var sto = []
+//push the lowercased strings into the storage array
+sto.push(lilOne);
+sto.push(lilTwo);
+//set a variable to the alphabetically sorted strings in the storage array
+var alpha = sto.sort();
 
+    //if they are not equal, and the alphabetized stringOne comes first
+if (alpha[0] === lilTwo) {
+// return -1
+return -1;
+//otherwise, if the alphabetized stringTwo comes first
+} else if (alpha[0] === lilOne) {
+    //return 1
+    return 1;
+}
 
 
     // YOUR CODE ABOVE HERE //
