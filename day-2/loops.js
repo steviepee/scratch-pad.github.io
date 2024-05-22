@@ -51,12 +51,18 @@ function printArrayValuesInReverse(array) {
 
 /** 
  * Given an input Object, return an Array containing the Object keys.
+ * I = function takes an object
+ * O = returns an array of the keys in the object
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
+  //create a storage array
+  var sto = [];
+  //call to the elements of the object
+  for (var key in object) {
+  sto.push(object.key);
+  }
+ return sto;
   
   // YOUR CODE ABOVE HERE //
 }
