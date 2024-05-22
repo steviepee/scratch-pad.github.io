@@ -112,12 +112,23 @@ return stoArray.join('').toLowerCase();
  *
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
+ * I =Function takes one string and a character
+ * O =function returns a boolean for whether the string begins with the character
+ * c =case insensitive
+ * e = N/A
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    
-
+    //first, put all the letters in the same case. Assign variables to their new forms
+    var lowString = string.toLowerCase();
+    var lowChar = char.toLowerCase();
+//check the first letter of the lowercased string against the lowercased char. if they're the same...
+if (lowString[0] == lowChar) {
+    // return true
+    return true;
+} 
+  //if not, return false  
+return false;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -132,11 +143,23 @@ function beginsWith(string, char) {
  *
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
+ * I = function takes a string and a single character
+ * O = returns boolean of whether string ends with the letter char
+ * C = case insensetive
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
+// create variables to lowercase both arguments
+var lowerString = string.toLowerCase();
+var lowerChar = char.toLowerCase();
+//check to see if the lowercased char matches with the last letter of string. if it does
+if (lowerChar === lowerString[string.length - 1]) {
+    //return true
+    return true;
+    //if not, the if chain ends
+}
+//if the if chain ends, return false
+return false;
 
     // YOUR CODE ABOVE HERE //
 }
