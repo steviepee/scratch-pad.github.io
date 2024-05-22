@@ -36,7 +36,7 @@ console.log("Fizz");
             console.log(num);
         }
     }
-}
+
 
 
     // YOUR CODE GOES ABOVE HERE //

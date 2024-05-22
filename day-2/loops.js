@@ -31,10 +31,18 @@ for (var i = 0; i < array.length; i++) {
 /** 
  * Given an input Array, loop backwards over the Array and print its values 
  * using console.log().
+ * I = function takes an array
+ * O = function outputs the values for said array, backwards
+ * C = N/a
+ * E =N/a
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
+  //iterate over each value in the array starting from the end
+  for (var r = array.length - 1; r >= 0; r--) {
+    //print each value to the console
+    console.log(array[r]);
+  }
   
   
   
