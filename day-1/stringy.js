@@ -209,10 +209,26 @@ return args.join('')
  *      longest("ben", "maggie");   //-> "maggie"
  *
  * TIP: What property of the String do we need to compare?
+ * I = FUnction takes two strings
+ * O = we return the string of the longest name between the two
+ * C = na
+ * E = Strings are the same length
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+//compare the lengths of the two strings. If they are the same
+if (stringOne.length === stringTwo.length) {
+    // return that the two names have the same length
+    return "These names are the same length"
+    //if string one is longer
+} else if (stringOne.length > stringTwo.length) {
+    //return the that string
+    return stringOne;
+    //if string two is longer 
+} else {
+    // return string two
+    return stringTwo;
+}
 
 
     // YOUR CODE ABOVE HERE //
@@ -224,6 +240,10 @@ function longest(stringOne, stringTwo) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
+ * I = 
+ * O = 
+ * C = 
+ * E = 
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
