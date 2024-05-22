@@ -287,6 +287,31 @@ return -1;
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+// set variables for the lowercases of both arguments
+var lilOne = stringOne.toLowerCase();
+var lilTwo = stringTwo.toLowerCase();
+//if the strings are equal
+ if (lilOne === lilTwo) {
+     //return 0
+     return 0;
+ }
+// if they are not, proceed to create a storage array
+var sto = []
+//push the lowercased strings into the storage array
+sto.push(lilOne);
+sto.push(lilTwo);
+//set a variable to the alphabetically sorted strings in the storage array
+var alpha = sto.sort();
+
+    //if they are not equal, and the alphabetized stringOne comes second
+if (alpha[1] === lilTwo) {
+// return -1
+return -1;
+//otherwise, if the alphabetized stringTwo comes second
+} else if (alpha[1] === lilOne) {
+    //return 1
+    return 1;
+}
 
 
 

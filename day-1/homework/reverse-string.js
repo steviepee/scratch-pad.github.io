@@ -24,11 +24,11 @@
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     //initialize a variable turning the string into an array
-    var newArray = input.split();
+    var newArray = input.split('');
     //initialize a variable that reverses the order of the items in that array
 var revArray = newArray.reverse();
     //return the reversed array in the form of a string
-    return revArray.join();
+    return revArray.join('');
     
     
     
