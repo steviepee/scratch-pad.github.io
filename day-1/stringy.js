@@ -188,12 +188,16 @@ return stringOne + stringTwo;
  *
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
+ * I = The function takes in some strings
+ * O = It returns all arguments passed to it as a combined string
+ * C = can only be inacted by manipulating variable args
+ * I = N/A
  */
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
-
+    //return all elements in args together as a single string
+return args.join('')
     // YOUR CODE ABOVE HERE //
 }
 
