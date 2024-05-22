@@ -168,11 +168,13 @@ return false;
  * Given two input Strings, return the Strings concatenated into one.
  *
  * TIP: What's the operator to concatenate two Strings?
+ * I = function takes two strings
+ * O = returns a melding of the two strings
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+//return the strings concatenated
+return stringOne + stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
