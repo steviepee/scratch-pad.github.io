@@ -29,21 +29,27 @@ return string.length;
 
 /**
  * Given an input String, return a new String forced to lowercase.
+ * I = function takes a string
+ * O = returns a string with all lowercased letters
+ *
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+//return the string with lowercased letters
+return string.toLocaleLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to uppercase.
+ * I = Function takes a string
+ * O = output is a string in all uppercased letters
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
+//return the string in capital letters
+return string.toUpperCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -61,9 +67,34 @@ function toUpperCase(string) {
  *      methods split and join?
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
+ * I = Function takes a string
+ * O = returns a new string forced to dash-case: case where spaces are replaced with dashes
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+//create a storage array
+var stoArray =[];
+  //separate the string into an array. initialize a variable for it
+var stringArray = string.split('');
+//iterate over each new value in the new array
+for (var x = 0; x < stringArray.length; x++) {
+  //check for spaces. If a space is found
+  if (stringArray[x] === ' ') {
+//push a dash into the storage array
+stoArray.push('-');
+//otherwise
+  } else {
+      //push the value into the storage array
+      stoArray.push(stringArray[x]);
+  }
+  
+}
+    //turn the storage array into a string and return it in lower cased form
+return stoArray.join('').toLowerCase();
+
+
+
+    
 
 
 
