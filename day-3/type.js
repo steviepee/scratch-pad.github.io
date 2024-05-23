@@ -35,10 +35,20 @@ function isArray(value) {
  * TIP: In JavaScript, how can we decipher if a value is an Object, but not 
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
+ * I = function takes all forms of information
+ * O = returns boolean of whether or not the data is an object
  * 
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
+    //if value resolves to object from typeof, and isn't a function, array or null or a Date
+    if (typeof value === 'object' && value !== null && !Array.isArray(value) && !isFinite(value)) {
+        //return true
+        return true;
+        //otherwise, return false
+    } else {
+        return false;
+    }
     
 
     
