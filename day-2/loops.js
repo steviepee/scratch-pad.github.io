@@ -70,10 +70,18 @@ function getObjectKeys(object) {
 /** 
  * Given an input Object, loop over the Object and print its keys 
  * using console.log().
+ * I = function takes an object
+ * O = prints the objects keys into the console
+ * C = NA
+ * E = NA
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+ //iterate over the entire object
+ for (var key in object) {
+  //print keys into the console
+  console.log(key);
+ } 
   
   
   
@@ -82,11 +90,20 @@ function printObjectKeys(object) {
 
 /** 
  * Given an input Object, return an Array containing the Object's values.
+ * I = function takes an object
+ * O = returns an array of all the values
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //create a storage array
+  var sto = [];
+  // iterate over the object
+  for (var key in object) {
+    //place the values into an array
+    sto.push(object[key]);
+  }
+  //return the array
+  return sto;
   
   
   // YOUR CODE ABOVE HERE //
@@ -95,12 +112,21 @@ function getObjectValues(object) {
 /** 
  * Given an input Object, loop over the Object and print its values 
  * using console.log().
+ * I = takes an object
+ * O = prints the objects values 
+ * C = must use console.log
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
   
   
-  
+   //create a storage array
+   //var sto = [];
+   // iterate over the object
+   for (var key in object) {
+     //print the values into the console
+     console.log(object[key]);
+   }
   
   // YOUR CODE ABOVE HERE //
 }
