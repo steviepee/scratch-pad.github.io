@@ -133,13 +133,20 @@ function printObjectValues(object) {
 
 /** 
  * Given an input Object, return the number of key/value pairs stored within that Object.
+ * I = takes an object
+ * O = returns the number of key/value pairs in the object
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  //create storage array
+  var sto = [];
+  //iterate over object
+  for (var key in object) {
+    //place the keys into an array. Give it a variable
+   var ans = Object.keys(object);
+//return the length of the array
+   return ans.length;
+  }
   // YOUR CODE ABOVE HERE //
 }
 
