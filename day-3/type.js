@@ -13,9 +13,14 @@
  * work?
  * 
  * HINT: There is a method that can help with this.
+ * I = function takes any value
+ * O = returns a boolean of whether the value is an array
+ * 
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
+    //check if the value is an array. Return the answer
+    return Array.isArray(value);
     
     
     
