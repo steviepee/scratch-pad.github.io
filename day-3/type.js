@@ -105,10 +105,37 @@ if (Array.isArray(value)) {
  *    typeOf(134) -> "number"
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
+ * I = takes any datatype
+ * O = returns a string of the datatype 
+ * 
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
+    //if the type is not an object
+    if (typeOf value !== object) {
+        //just use typeOf
+        return typeOf value;
+        //if it is, though
+    } else {
+        //check if it's an array
+        if (Array.isArray(value)) {
+            //if it is, return array
+            return 'array';
+            //if it isn't, though, see if it's a date
+        } else if (isFinite(value)) {
+            // if it is, return date
+            return 'date';
+            //if it's not those and it is null
+        } else if (value === null) {
+            // return null
+            return 'null';
+            //if it's none of those
+        } else {
+            //return object
+            return 'object';
+        }
+    }
+    }
     
     
     
