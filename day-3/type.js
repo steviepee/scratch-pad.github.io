@@ -59,15 +59,29 @@ function isObject(value) {
 
 
 /** 
- * Given an input value, return true if is either an Array or an an Object 
+ * Given an input value, return true if is either an Array or an Object 
  * intended as a collection, false if otherwise.
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
+ * I = takes any object
+ * O = returns a boolean of whether or not the value is an array or object
+ * 
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+//if the value is an array
+if (Array.isArray(value)) {
+    //return true.
+    return true;
+}// leave it here & start a whole new if 
+//if value resolves to object from typeof, and isn't a function, array or null or a Date
+ if (typeof value === 'object' && value !== null && !isFinite(value)) {
+     //return true
+     return true;
+//     //otherwise, return false
+ } else {
+     return false;
+ }
     
     
     // YOUR CODE ABOVE HERE //
