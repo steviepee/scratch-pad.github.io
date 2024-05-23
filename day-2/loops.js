@@ -60,7 +60,7 @@ function getObjectKeys(object) {
   var sto = [];
   //call to the elements of the object
   for (var key in object) {
-  sto.push(object.key);
+  sto.push(key);
   }
  return sto;
   
