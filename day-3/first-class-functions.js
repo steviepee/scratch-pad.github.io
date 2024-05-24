@@ -101,10 +101,22 @@ return i.endsWith(e);
  * 
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
+ * I = function takes an array of strings and a function to modify the string
+ * O = returns the array of strings modified
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
+    //create a storage array
+    var sto = [];
+    //iterate over each string in the array
+    for (var i = 0; i < strings.length; i ++) {
+        //for each string, expose it to the argument function. Give it a variable, just in case
+        var a = modify(strings[i]);
+        //then push the new string into the storage array
+        sto.push(a);
+    }
+    //return the storage array
+    return sto;
     
     
     
