@@ -133,10 +133,27 @@ function modifyStrings(strings, modify) {
  * begin with "C", or they are all exclaimations that end with "!".
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
+ * I = takes an array of strings and a function to test the string
+ * O = returns boolean on whether all strings passed the test
+ *
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
+    //iterate over each string in the array
+    for (var i = 0; i < strings.length; i ++) {
+        //test each iteration against the test function. if it passes
+        if (test(strings[i])) {
+            //engage in frivolty and continue the loop
+            console.log('woohoo');
+            //if it fails, return false and exit
+        } else {
+            return false;
+        }
+    }
     
+    
+    //if they all pass, return true
+    return true;
     
     
     
