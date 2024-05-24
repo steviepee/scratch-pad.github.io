@@ -74,10 +74,21 @@ return c[0] === b;  //or simply return a.startsWith(b);
  * Given a endsWith character, which will be a single character, return a 
  * Function that tests whether a given String ends with the endsWith 
  * character.
+ * I = function takes a single letter
+ * O = returns a function that tests whether a string ends with that letter
+ * C = case insensitive
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    //return the function that tests a string against this letter
+    return function(string) {
+//bring both strings to the same case w variables
+var i = string.toLowerCase();
+var e = endsWith.toLowerCase();
+//return to see if the same cased string ends with the same cased function var
+return i.endsWith(e);
+
+    }
     
     
     
