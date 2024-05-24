@@ -112,21 +112,22 @@ if (Array.isArray(value)) {
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     //if the type is not an object
-    if (typeOf(value) !== 'object') {
+    if (typeof value !== 'object') {
         //just use typeOf
-        return typeOf(value);
+        return typeof value;
         //if it is, though, check if it's an array
     } else if (Array.isArray(value)) {
             //if it is, return array
             return 'array';
-            //if it isn't, though, see if it's a date
-        } else if (isFinite(value)) {
-            // if it is, return date
-            return 'date';
-            //if it's not those and it is null
+            //if it's not those and it's null
         } else if (value === null) {
             // return null
             return 'null';
+            //if not, see if it's a date
+        } else if (isFinite(value)) {
+            // if it is, return date
+            return 'date';
+        
             //if it's none of those
         } else {
             //return object
