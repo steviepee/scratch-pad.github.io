@@ -48,9 +48,16 @@ return function(test) {
  * Given a startsWith character, which will be a single character, return a 
  * Function that tests whether a given String starts with the startsWith 
  * character.
+ * I = Function takes a single letter
+ * O = Returns a function that tests whether a string starts with that letter
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
+    //return  a function for a string to test against startswith
+    return function(string) {
+        //does the string start with startsWith
+        return string.startsWith(startsWith);
+    }
     
     
     
