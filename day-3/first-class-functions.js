@@ -10,10 +10,16 @@
  * Given an input base to test against, which could be a String or Number, 
  * return a Function that tests whether a given value is greater than the 
  * base.
+ * I = takes in a string or a number
+ * O = returns a function to test the whether another value is greater than it
+ * c = na
+ * E = the values are different datatypes
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(test) {
+        return base < test;
+    }
    
     
     // YOUR CODE ABOVE HERE //
