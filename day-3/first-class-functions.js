@@ -50,17 +50,22 @@ return function(test) {
  * character.
  * I = Function takes a single letter
  * O = Returns a function that tests whether a string starts with that letter
- */
+ *///C = case insensitive
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     //return  a function for a string to test against startswith
     return function(string) {
-        //does the string start with startsWith
-        return string.startsWith(startsWith);
+        //make them both lowercase
+       var a = string.toLowerCase();
+        var b = startsWith.toLowerCase();
+        //split a into an array with a variable
+var c = a.split('');
+//boolean the first character of c against startsWith lowercased
+return c[0] === b;  //or simply return a.startsWith(b);
     }
     
     
-    
+
     
     // YOUR CODE ABOVE HERE //
 }
