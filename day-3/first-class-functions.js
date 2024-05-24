@@ -17,7 +17,9 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
+    //create a function with a variable to test against the base
     return function(test) {
+        //have it return a boolean of whether its greater than the base
         return base < test;
     }
    
@@ -32,8 +34,11 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-   
+    //create a functon to test against the base
+return function(test) {
+    //have it return a boolean of whether the test value is lower than the base
+    return test < base;
+}
     
     
     // YOUR CODE ABOVE HERE //
