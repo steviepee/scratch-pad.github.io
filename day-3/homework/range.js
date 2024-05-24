@@ -30,22 +30,23 @@ function range(start, end) {
     //if the first number is lower
     if (start < end) {
 //iterate all integers in ascending order until end
-for (var i = start; i === end; i++) { 
+for (var i = start; i <= end; i++) { 
 //push the numbers into the storage array each iteration
 sto.push(i);
 }
 //if the first number is greater
     } else if (start > end) {
         //iterate to the end in descending order
-        for (var x = start; x = end; x--) {
+        for (var x = start; x >= end; x--) {
             //push each number into the storage array
             sto.push(x);
         }
-        //either way, return the storage array
+    
+    }    //either way, return the storage array
         return sto;
     
 
-    }
+    
     
     
     
