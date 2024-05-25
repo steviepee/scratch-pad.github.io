@@ -9,6 +9,8 @@
  *     that returns a contact object.
  *     
  *          ex: makeContact(1, 'Max', 'Gaudin'); // => {id: 1, nameFirst: 'Max', nameLast: 'Gaudin'}
+ * I = function takes three arguments of any type
+ * O = returns an object with each arguments value corresponding to a key of the same name as the parameter
  *     
  *  b. Create a factory Function called makeContactList that returns an Object 
  *     that manages contacts. The contact-list object should have the following methods:
@@ -31,11 +33,18 @@
  *          
  *          WARNING: To pass this test, the LAST full name should have NO
  *          new-line character added after it!
+ * I = no input
+ * O = returns factory function that manages contacts via specific functions in its key/value pairs
  */
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+    //create factory function that places each argument into its own key/value pair in an object
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    };
 } 
 
 
@@ -49,9 +58,43 @@ function makeContactList() {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        addContact: function(contact) {
+            return contacts.push(contact);
+        },
+        findContact: function(fullName) {
+            //iterate over the array
+            for (i = 0; i < contacts.length; i++) {
+                //create shorthand variable for current unnamed object in the array
+                var dude = contacts[i];
+                //if the quality of nameFirst and nameLast = the name we're looking for
+                if (dude.nameFirst + ' ' + dude.nameLast === fullName) {
+                    //push that object into the storage array
+                      return contacts.push(dude);
+                }
+            }//if none of the objects match, return undefined
+                return undefined;
+            },
+            removeContact: function(contact) {
+                 //iterate over the array
+            for (i = 0; i < contacts.length; i++) {
+                //create shorthand variable for current unnamed object in the array
+                var dude = contacts[i];
+                //if the quality of nameFirst and nameLast = the name we're looking for
+                if (dude.nameFirst + dude.nameLast === contact.nameFirst + contact.nameLast)
+                contacts.splice(dude, 1);
+            }
+        },
+        printAllContactNames: function() {
+             //iterate over the array
+             for (i = 0; i < contacts.length; i++) {
+                //create shorthand variable for current unnamed object in the array
+                var dude = contacts[i];
+
         }
+
     }
-}
+
 
 
 
