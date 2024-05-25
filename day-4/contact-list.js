@@ -64,20 +64,20 @@ function makeContactList() {
         },
         findContact: function(fullName) {
             //iterate over the array
-            for (i = 0; i < contacts.length; i++) {
+            for (var i = 0; i < contacts.length; i++) {
                 //create shorthand variable for current unnamed object in the array
                 var dude = contacts[i];
                 //if the quality of nameFirst and nameLast = the name we're looking for
                 if (dude.nameFirst + ' ' + dude.nameLast === fullName) {
                     //push that object into the storage array
-                      return contacts.push(dude);
+                    return dude;
                 }
             }//if none of the objects match, return undefined
                 return undefined;
             },
             removeContact: function(contact) {
                  //iterate over the array
-            for (i = 0; i < contacts.length; i++) {
+            for (var i = 0; i < contacts.length; i++) {
                 //create shorthand variable for current unnamed object in the array
                 var dude = contacts[i];
                 //if the quality of nameFirst and nameLast = the name we're looking for
@@ -87,9 +87,11 @@ function makeContactList() {
         },
         printAllContactNames: function() {
              //iterate over the array
-             for (i = 0; i < contacts.length; i++) {
+             for (var i = 0; i < contacts.length; i++) {
                 //create shorthand variable for current unnamed object in the array
                 var dude = contacts[i];
+             }
+            }
 
         }
 
