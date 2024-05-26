@@ -86,11 +86,23 @@ function makeContactList() {
             }
         },
         printAllContactNames: function() {
+            //create new storage array for format
+            var printContacts = [];
              //iterate over the array
              for (var i = 0; i < contacts.length; i++) {
                 //create shorthand variable for current unnamed object in the array
                 var dude = contacts[i];
+                //Edge: if it is the final contact
+                if (i === contacts.length - 1) {
+                    //push dude to the array w/o /n
+                    printContacts.push(dude.nameFirst + ' ' + dude.nameLast);
+                    //if it's not, push, but create line break /n
+                } else{
+                    printContacts.push(dude.nameFirst + ' ' + dude.nameLast);
+                }
+
              }
+             return printContacts.join();
             }
 
         }
