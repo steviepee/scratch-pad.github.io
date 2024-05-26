@@ -90,19 +90,19 @@ function makeContactList() {
             var printContacts = [];
              //iterate over the array
              for (var i = 0; i < contacts.length; i++) {
-                //create shorthand variable for current unnamed object in the array
-                var dude = contacts[i];
+                //create shorthand variable for current unnamed object in the array in order of first name then last name
+                var dude = contacts[i].nameFirst + ' ' + contacts[i].nameLast;
                 //Edge: if it is the final contact
                 if (i === contacts.length - 1) {
                     //push dude to the array w/o /n
-                    printContacts.push(dude.nameFirst + ' ' + dude.nameLast);
-                    //if it's not, push, but create line break /n
+                    printContacts.push(dude);
+                    //if it's not, push, but create line break \n
                 } else{
-                    printContacts.push(dude.nameFirst + ' ' + dude.nameLast);
+                    printContacts.push(dude + '\n');
                 }
 
              }
-             return printContacts.join();
+             return printContacts.join('');
             }
 
         }
